@@ -14,7 +14,16 @@ And then execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'humure-client'
+
+client = HumureClient.new
+```
+
+
+```ruby
+HumureClient.new(url: "http://localhost:4000")
+```
 
 ## Development
 
