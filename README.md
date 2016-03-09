@@ -17,12 +17,17 @@ And then execute:
 ```ruby
 require 'humure-client'
 
-client = HumureClient.new
-```
+thing = HumureClient.new
+# thing = HumureClient.new(url: "http://localhost:4000")
 
+thing.temperature
+# => 26.0
 
-```ruby
-HumureClient.new(url: "http://localhost:4000")
+thing.humidity
+# => 53
+
+thing.lamp
+# => "on"
 ```
 
 ## Development
