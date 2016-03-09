@@ -28,6 +28,15 @@ thing.humidity
 
 thing.lamp
 # => "on"
+
+thing.switch_lamp_on
+# => "on"
+
+thing.switch_lamp_off
+# => "off"
+
+thing.change_lamp_color(240, 65, 36)
+# => [240, 65, 36]
 ```
 
 ## Development
