@@ -30,7 +30,8 @@ class HumureClient
   protected
 
   def get_request(path)
-    resp = Net::HTTP.get_response(uri(path))
+    http = Net::HTTP.new(uri(path).host, uri(path).port)
+    resp = http.get(uri(path).path, { "X-Sensor" => sensor, "X-Token" => token })
     process_response(resp)
   rescue SocketError
     nil

@@ -17,8 +17,8 @@ And then execute:
 ```ruby
 require 'humure-client'
 
-thing = HumureClient.new
-# thing = HumureClient.new(url: "http://localhost:4000")
+thing = HumureClient.new(token: "the_token")
+# thing = HumureClient.new(token: "the_token", url: "http://localhost:4000")
 
 thing.temperature
 # => 26.0
