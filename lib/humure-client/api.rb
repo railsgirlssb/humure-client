@@ -41,6 +41,8 @@ class HumureClient
     http = Net::HTTP.new(uri(path).host, uri(path).port)
     request = Net::HTTP::Put.new(uri(path).path)
     request.set_form_data({})
+    request["X-Sensor"] = sensor
+    request["X-Token"] = token
 
     resp = http.request(request)
     process_response(resp)

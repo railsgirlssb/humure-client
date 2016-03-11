@@ -17,7 +17,7 @@ class ApiTest < Minitest::Test
   end
 
   def test_lamp_on
-    stub_request(:put, "localhost:3001/api/lamp/on").to_return(body: '{ "value": "on"}')
+    stub_request(:put, "localhost:3001/api/lamp/on").with(headers: {"X-Sensor": "fake", "X-Token": "a-team"}).to_return(body: '{ "value": "on"}')
     assert_equal "on", client.switch_lamp_on
   end
 
